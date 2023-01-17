@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class wayPointGizmo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] float gizmoSize = 0.33f;
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position, 0.5f);
         Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, gizmoSize);
     }
 }
